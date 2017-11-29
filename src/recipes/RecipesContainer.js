@@ -3,6 +3,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import Title from '../components/Title'
 import RecipeItem from './RecipeItem'
+import RecipeEditor from './RecipeEditor'
 import './RecipesContainer.css'
 
 class RecipesContainer extends PureComponent {
@@ -19,6 +20,8 @@ class RecipesContainer extends PureComponent {
 
     return(
       <div className="RecipesContainer">
+        <RecipeEditor />
+
         <header>
           <Title content="All Recipes" />
         </header>
