@@ -5,7 +5,10 @@
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.15"
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.15",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
@@ -19,11 +22,13 @@
   "devDependencies": {
     "breakpoint-sass": "^2.7.1",
     "chai": "^4.1.2",
-    "chai-enzyme": "^0.8.0",
-    "enzyme": "~>2",
+    "chai-enzyme": "^1.0.0-beta.0",
+    "cheerio": "^1.0.0-rc.2",
+    "enzyme": "3",
+    "enzyme-adapter-react-16": "^1.1.0",
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.1.1",
-    "react-addons-test-utils": "^15.6.2",
+    "react-addons-test-utils": "^16.0.0-alpha.3",
     "react-test-renderer": "^16.0.0"
   }
 }
