@@ -6,7 +6,11 @@ class Title extends PureComponent {
     const { content, style, className } = this.props
 
     return (
-      <h1 className={['Title', className].join(' ')} style={{ ...style || {} }}>{ content }</h1>
+      <h1
+        className={['Title', className].join(' ')}
+        style={{ ...style || {} }}>
+        { content }
+      </h1>
     )
   }
 }
