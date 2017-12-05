@@ -1,7 +1,10 @@
 // src/reducers/recipes.js
 import recipes from  '../fixtures/recipes'
-import { CREATE_RECIPE } from '../actions/recipes/create'
-import { TOGGLE_LIKE_RECIPE } from '../actions/recipes/like'
+import {
+  TOGGLE_LIKE_RECIPE,
+  FETCHED_RECIPES,
+  CREATE_RECIPE
+} from '../actions/recipes'
 
 const newId = (state) => {
   const ids = state
@@ -12,6 +15,9 @@ const newId = (state) => {
 
 export default (state = recipes, {type, payload} = {}) => {
   switch(type) {
+    case FETCHED_RECIPES :
+      return [ ...payload ]
+
     case CREATE_RECIPE :
       return [{ ...payload, _id: newId(state) }].concat(state)
 
